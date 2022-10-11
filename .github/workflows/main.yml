@@ -28,6 +28,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
+      - uses: iamsauravsharma/create-dotenv@v1.2.1
       - name: Build
         run: |
                 yarn install
