@@ -1,0 +1,15 @@
+{
+  "name": "prisma-mcve",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:another-dave/prisma-mcve.git",
+  "author": "anotherdave",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "4.4.0",
+    "prisma": "^4.4.0"
+  },
+  "prisma": {
+    "seed": "sh prisma/seed.sh"
+  }
+}
