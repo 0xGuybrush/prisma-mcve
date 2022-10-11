@@ -1,4 +1,4 @@
 #!/bin/sh
 
 set -ex
-psql -d prisma_test -U postgres -e < ./prisma/seed.sql
+psql -h localhost -p 5432 -d test -U postgres --no-password -e < ./prisma/seed.sql

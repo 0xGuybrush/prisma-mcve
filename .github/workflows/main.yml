@@ -23,6 +23,7 @@ jobs:
     env:
       DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test?connect_timeout=300
       DEBUG: "*"
+      PGPASSFILE: ./.pgpass
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -31,5 +32,6 @@ jobs:
       - uses: iamsauravsharma/create-dotenv@v1.2.1
       - name: Build
         run: |
+                echo 'localhost:5432:test:postgres:postgres' > ./.pgpass
                 yarn install
                 yarn prisma migrate reset --force
