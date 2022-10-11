@@ -33,5 +33,6 @@ jobs:
       - name: Build
         run: |
                 echo 'localhost:5432:test:postgres:postgres' > ./.pgpass
+		chmod 600 .pgpass
                 yarn install
                 yarn prisma migrate reset --force
