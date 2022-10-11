@@ -22,6 +22,7 @@ jobs:
           - '5432:5432'
     env:
       DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test?connect_timeout=300
+      DEBUG: "*"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
